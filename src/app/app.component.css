@@ -1,0 +1,95 @@
+.whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    width: 600px;
+    height: 650px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.neon {
+    animation: neonBlink 0.5s alternate;
+    border: 4px solid black;
+}
+
+@keyframes neonBlink {
+    from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        opacity: 1;
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        opacity: 0.7;
+    }
+}
+
+button{
+    border: none;
+}
+
+.pop-up {
+    position: fixed;           /* Fixed positioning to overlay the entire viewport */
+    top: 50%;                  /* Center vertically */
+    left: 50%;                 /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element */
+    width: 300px;              /* Adjust width as needed */
+    padding: 20px;            /* Add padding for content */
+    background-color: white;  /* White background for the card */
+    border: 2px solid #ccc;   /* Light border for card outline */
+    border-radius: 10px;      /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation effect */
+    z-index: 1000;            /* Ensure it's above other content */
+    text-align: center;       /* Center text and button inside */
+    display: none;            /* Hidden by default, shown when triggered */
+}
+
+.pop-up.show {
+    display: block;           /* Show the pop-up when this class is added */
+}
+
+button {
+    padding: 10px 20px;       /* Add some padding to the button */
+    background-color: #007BFF; /* Primary color for button */
+    color: white;             /* White text on the button */
+    border: none;             /* Remove default border */
+    border-radius: 5px;       /* Rounded corners for the button */
+    cursor: pointer;          /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade for button hover effect */
+}
